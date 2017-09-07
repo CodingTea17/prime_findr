@@ -10,9 +10,16 @@ RSpec.describe() do
     sifter = Sift.new()
     # Creates an array of real, confirmed prime nums
     real_prime = []
-    Prime.each(100000) do |i|
+    Prime.each(1000) do |i|
       real_prime.push(i)
     end
-    expect(sifter.prime_findr(100000)).to eq(real_prime)
+    expect(sifter.prime_findr(1000)).to eq(real_prime)
   end
+  # it("will test the speed of the Prime class") do
+  #   real_prime = []
+  #   Prime.each(1000000) do |i|
+  #     real_prime.push(i)
+  #   end
+  #   expect(real_prime).to eq(real_prime)
+  # end
 end
