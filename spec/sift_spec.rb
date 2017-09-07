@@ -1,5 +1,6 @@
 require 'sift.rb'
 require 'prime'
+require 'benchmark'
 
 RSpec.describe() do
   it("will return the primes numbers from 2 to 2") do
@@ -10,10 +11,11 @@ RSpec.describe() do
     sifter = Sift.new()
     # Creates an array of real, confirmed prime nums
     real_prime = []
-    Prime.each(1000) do |i|
+    Prime.each(100000) do |i|
       real_prime.push(i)
     end
-    expect(sifter.prime_findr(1000)).to eq(real_prime)
+    # puts Benchmark.measure { sifter.prime_findr(100000)}
+    expect(sifter.prime_findr(100000)).to eq(real_prime)
   end
   # it("will test the speed of the Prime class") do
   #   real_prime = []

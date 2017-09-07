@@ -15,4 +15,3 @@ class Sift
     prime_ary
   end
 end
- # prime_findr(100)
